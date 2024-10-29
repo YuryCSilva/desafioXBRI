@@ -1,27 +1,55 @@
 # DesafioXBRI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+Este projeto tem como objetivo desafiar as minhas habilidades através da construção de uma aplicação web para realizar o cadastro de itens.
 
-## Development server
+## Funcionalidades/telas
+Este projeto irá possuir todas as funcionalidades de um C.R.U.D (Criar, Ler, Atualizar e Deletar), desta forma, o projeto irá possuir duas telas, que terão como título "Listagem" e "Cadastro/Edição/Visualização", abaixo está um breve resumo sobre cada uma delas:
+- A Listagem será responsável por adicionar um novo item e listar todos eles. Em cada um desses itens, será possível deletar e ser direcionado para a visualização e edição dos mesmos;
+- A tela de Cadastro/Edição/Visualização como o próprio nome já diz, será responsável por cadastrar, editar e visualizar um item. Todas as vezes que um usuário realizar alguma ação dessa, ele posteriormente será direcionado novamente para a listagem;
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requisitos do sistema
+Certifique-se que sua máquina possua as seguintes dependências:
+- [NodeJS e NPM](https://nodejs.org/en/download/package-manager/current);
+- [Angular CLI](https://angular.dev/tools/cli/setup-local);
+- [Git](https://git-scm.com/downloads);
 
-## Code scaffolding
+## Bibliotecas externas presentes no projeto
+1. NG-ZORRO;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Arquitetura
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Camada de Apresentação (View/UI) 
 
-## Running unit tests
+- Camada de Lógica de Negócio (Classes e Hooks Personalizados) 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Camada de Comunicação (API Services) 
 
-## Running end-to-end tests
+- Camada de Utilitários e Serviços Comuns 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+A camada de UI apenas exibe dados que vêm da camada da lógica de negócio, que por sua vez a lógica de negócio e a camada de serviços de API lidam com a obtenção de dados e pôr fim a camada de comunicação (API Services) é responsável por interagir com o localstorage (simulação à requisição de uma API externa) e fornecer os dados necessários para a camada lógica. A camada de utilitários pode ser acessada por todas as outras camadas. 
 
-## Further help
+## Estruturação de pastas
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```estrutura
+src/
+|__ components/
+|      |__ templates/
+|      |__ UI/
+|__ features/
+|      |__ produtos/
+|      |     |__ pages/
+|      |     |__ repositorys/
+|      |     |__ services/
+|      |     |__ class/
+|      |     |__ interfaces/
+|      |     |__ routes/
+|__ services
+|__ classes
+|__ repository
+|__ routes
+|      |__ app.routing.ts
+|__ utils
+|      |__ validations.ts 
+|__ styles
+```
