@@ -21,7 +21,7 @@ Certifique-se que sua máquina possua as seguintes dependências:
 
 - Camada de Apresentação (View/UI) 
 
-- Camada de Lógica de Negócio (Classes e Hooks Personalizados) 
+- Camada de Lógica de Negócio (Classes e Services) 
 
 - Camada de Comunicação (API Services) 
 
