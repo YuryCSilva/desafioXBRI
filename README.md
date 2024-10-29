@@ -31,6 +31,8 @@ A camada de UI apenas exibe dados que vêm da camada da lógica de negócio, que
 
 ## Estruturação de pastas
 
+A estruturação de pastas foi pensada para ser de forma que atendesse uma aplicação escalável sem que houvesse mudanças drásticas na sua composição. Pode ser que nem todas as pastas estejam presentes nesse projeto, segue abaixo a estruturação proposta:
+
 ```estrutura
 src/
 |__ components/
