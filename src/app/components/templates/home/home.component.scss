@@ -1,0 +1,64 @@
+@import "variables";
+
+nz-header,
+nz-footer {
+  background: $color-primary;
+  color: $font-color-contrast;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 992px) {
+    justify-content: flex-start;
+  }
+}
+
+nz-header {
+  text-align: center;
+
+  .logo {
+    font-size: calc($font-size-base * 1.5);
+    color: #fff;
+  }
+}
+nz-footer {
+  line-height: 1.5;
+}
+
+nz-sider {
+  color: $font-color-contrast;
+  background: $color-secondary;
+  line-height: 120px;
+  padding-bottom: 0;
+
+  ul {
+    background: $color-secondary;
+    color: $font-color-contrast;
+    min-height: 100%;
+  }
+
+  .submenu-icon {
+    margin-right: $space-xs;
+  }
+
+  .ant-menu-item a,
+  .ant-menu-item-selected a,
+  .ant-menu-item-selected a:hover {
+    color: $color-white;
+  }
+}
+
+nz-content {
+  padding: $space-md;
+  background: $color-white;
+  color: $font-color-main;
+  min-height: calc(100vh - 60px - 60px);
+  overflow: auto;
+}
+
+nz-footer {
+  a {
+    margin-left: calc($space-xs / 2);
+  }
+}
