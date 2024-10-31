@@ -1,0 +1,46 @@
+@import "variables";
+
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item-active,
+.ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-light .ant-menu-submenu-active,
+.ant-menu-light .ant-menu-submenu-title:hover,
+.ant-menu-dark .ant-menu-item:hover,
+.ant-menu-dark .ant-menu-item-active,
+.ant-menu-dark .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-dark .ant-menu-submenu-active,
+.ant-menu-dark .ant-menu-submenu-title:hover,
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: $color-primary;
+  color: $color-white;
+}
+
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after {
+    border-right: 3px solid $color-contrast;
+}
+
+.ant-menu-submenu:hover
+  > .ant-menu-submenu-title
+  > .ant-menu-submenu-expand-icon,
+.ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow,
+.ant-menu-submenu-arrow,
+.ant-menu-submenu-selected {
+  color: $color-white;
+}
+
+.ant-layout-sider-zero-width-trigger,
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+  background: $color-primary;
+}
+
+.ant-menu,
+.sider-menu,
+.ant-menu-submenu > .ant-menu {
+  background: $color-secondary;
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+  color: $font-color-contrast;
+}
